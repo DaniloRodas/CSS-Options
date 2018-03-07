@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+ @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster");
+
+body{
+	text-align:center;
+}
+	h1{
+		display:inline-block;
+		position:relative;
+		color: silver;
+		font-family: 'Berkshire Swash', cursive;
+	}
+	
+	h1::after,h1::before{
+		content:'';
+		position:absolute;
+		width:120px;
+		height:3px;
+		background-color:currentColor;
+		top:0.6em;
+		transform:scale(0);
+		transition: all 0.3s ease-in;
+	}
+	
+	h1:hover::before, h1:hover::after{
+		transform:scale(1);
+	}
+	
+	h1::before{
+		left:-140px;
+	}
+	h1::after{
+		right: -140px;
+	}
+
+</style>
+</head>
+<body>
+	<h1 class="lines-effect">Animacion CSS</h1>
+</body>
+</html>
